@@ -1,0 +1,46 @@
+<h1>Example App: Home</h1>
+
+<form method="post" enctype="application/x-www-form-urlencoded" action="/">
+
+	<label>klik hier<input name="klikboks" type="checkbox" /></label>
+
+	<label>Naam<input name="naam" type="text" /></label>
+
+	<input type="submit" value="versturen" />
+</form>
+
+<hr>
+<br>
+<hr>
+
+<form method="post" enctype="multipart/form-data" action="/afbeelding">
+
+	<label>foto<input name="avatar" type="file" /></label>
+
+	<input type="submit" value="versturen" />
+</form>
+
+{{#if image}}
+
+<img src="/uploads/{{image}}" alt="kat" />
+
+{{/if}}
+
+{{#if persoon}}
+
+<h1>We laten dynamische data zien, namelijk: {{{persoon}}}</h1>
+
+{{/if}}
+
+{{#if eerder_opgeslagen_data}}
+
+<h1>Ik heb wat onthouden: {{{eerder_opgeslagen_data}}}</h1>
+
+{{/if}}
+
+
+{{#if gebruikersnaam}}
+
+<h1>Naam: {{{gebruikersnaam}}}</h1>
+
+{{/if}}
